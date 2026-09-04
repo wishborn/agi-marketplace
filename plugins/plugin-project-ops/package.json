@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-project-ops",
+  "name": "@agi/plugin-project-ops",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -16,6 +16,6 @@
     "bakedIn": true
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

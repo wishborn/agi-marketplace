@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-stack-react",
+  "name": "@agi/plugin-stack-react",
   "version": "0.1.1",
   "private": true,
   "type": "module",

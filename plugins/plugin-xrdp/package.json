@@ -1,22 +1,33 @@
 {
-  "name": "@aionima/plugin-xrdp",
-  "version": "0.1.0",
+  "name": "@agi/plugin-xrdp",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
-    "id": "aionima-xrdp",
+    "id": "agi-xrdp",
     "name": "xrdp",
-    "description": "xrdp remote desktop server management — isolated RDP sessions with service control, logs, and connection info",
+    "description": "xrdp remote desktop server management \u2014 isolated RDP sessions with service control, logs, and connection info",
     "aionimaVersion": ">=0.1.0",
     "category": "system",
-    "provides": ["system-services", "ux"],
-    "permissions": ["shell.exec", "filesystem.read"],
+    "provides": [
+      "system-services",
+      "ux"
+    ],
+    "permissions": [
+      "shell.exec",
+      "filesystem.read"
+    ],
     "entry": "./src/index.ts",
     "bakedIn": false,
-    "disableable": true
+    "disableable": true,
+    "aliases": [
+      "aionima-xrdp"
+    ]
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

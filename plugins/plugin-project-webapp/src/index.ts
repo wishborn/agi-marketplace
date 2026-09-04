@@ -1,11 +1,10 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 
 export default createPlugin({
   async activate(api) {
     api.registerProjectType({
       id: "web-app",
       label: "Web App",
-      category: "web",
       hostable: true,
       defaultMeta: {
         type: "web-app",

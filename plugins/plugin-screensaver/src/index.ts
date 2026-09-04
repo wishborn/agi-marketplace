@@ -8,7 +8,7 @@
  * - Gateway shutdown hook to clean up xss-lock
  */
 
-import { createPlugin, type AionimaPluginAPI } from "@aionima/sdk";
+import { createPlugin, type AionimaPluginAPI } from "@agi/sdk";
 import { join } from "node:path";
 import { execFile as execFileCb } from "node:child_process";
 

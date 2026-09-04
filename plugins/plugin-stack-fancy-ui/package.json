@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-stack-fancy-ui",
+  "name": "@agi/plugin-stack-fancy-ui",
   "version": "0.2.0",
   "private": true,
   "type": "module",
@@ -16,6 +16,6 @@
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

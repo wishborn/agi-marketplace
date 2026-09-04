@@ -3,7 +3,7 @@
  * Provides settings + comms page with chat logs and accomplishments.
  */
 
-import { createPlugin, defineDashboardPage, defineSettingsPage } from "@aionima/sdk";
+import { createPlugin, defineDashboardPage, defineSettingsPage } from "@agi/sdk";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";

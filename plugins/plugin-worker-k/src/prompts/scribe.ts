@@ -1,4 +1,4 @@
-import type { WorkerDefinition } from "@aionima/sdk";
+import type { WorkerDefinition } from "@agi/sdk";
 
 export const scribe: WorkerDefinition = {
   id: "scribe",

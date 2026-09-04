@@ -1,4 +1,4 @@
-import type { WorkerDefinition } from "@aionima/sdk";
+import type { WorkerDefinition } from "@agi/sdk";
 
 export const commWriterTech: WorkerDefinition = {
   id: "comm.writer.tech",
@@ -8,7 +8,6 @@ export const commWriterTech: WorkerDefinition = {
   description: "Technical documentation worker. Writes API docs, code comments, README files, and technical guides. Focuses on clarity, accuracy, and developer experience. Always followed by comm.editor in the enforced chain.",
   modelTier: "capable",
   allowedTools: ["Read", "Write", "Edit", "Glob", "Grep"],
-  chainTarget: "comm.editor",
   keywords: ["documentation", "docs", "README", "API docs", "JSDoc", "technical writing", "guide", "how-to"],
   prompt: `---
 name: worker-comm-writer-tech

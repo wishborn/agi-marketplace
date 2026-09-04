@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-worker-ops",
+  "name": "@agi/plugin-worker-ops",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -17,6 +17,6 @@
     "disableable": true
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

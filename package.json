@@ -1,6 +1,6 @@
 {
-  "name": "@aionima/marketplace",
-  "version": "1.0.0",
+  "name": "@agi/marketplace",
+  "version": "1.0.3",
   "private": true,
   "description": "Official Aionima plugin marketplace catalog",
   "type": "module"

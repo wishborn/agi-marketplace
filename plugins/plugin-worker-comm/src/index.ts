@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { commWriterTech } from "./prompts/writer-tech.js";
 import { commWriterPolicy } from "./prompts/writer-policy.js";
 import { commEditor } from "./prompts/editor.js";

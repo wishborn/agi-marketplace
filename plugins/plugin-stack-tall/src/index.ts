@@ -4,7 +4,7 @@
  * Registers the TALL framework stack definition for Laravel-based web apps.
  */
 
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 
 export default createPlugin({
   async activate(api) {

@@ -4,7 +4,7 @@
  * Registers a settings page for configuring the OpenAI API key, base URL, and default model.
  */
 
-import { createPlugin, defineSettingsPage } from "@aionima/sdk";
+import { createPlugin, defineSettingsPage } from "@agi/sdk";
 
 export default createPlugin({
   async activate(api) {

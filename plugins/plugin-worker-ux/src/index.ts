@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { uxDesignerWeb } from "./prompts/designer-web.js";
 import { uxDesignerCli } from "./prompts/designer-cli.js";
 

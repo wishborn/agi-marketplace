@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-stack-writing-screenplay",
+  "name": "@agi/plugin-stack-writing-screenplay",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -16,6 +16,6 @@
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

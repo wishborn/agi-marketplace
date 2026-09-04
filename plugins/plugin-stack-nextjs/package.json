@@ -1,21 +1,28 @@
 {
-  "name": "@aionima/plugin-stack-nextjs",
+  "name": "@agi/plugin-stack-nextjs",
   "version": "0.2.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-nextjs",
     "name": "Next.js Stack",
     "description": "React framework with SSR, file-based routing, and Tailwind CSS",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-node-runtime", "stack-react"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-node-runtime",
+      "stack-react"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

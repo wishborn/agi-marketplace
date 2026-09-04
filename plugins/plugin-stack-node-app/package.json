@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-node-app",
+  "name": "@agi/plugin-stack-node-app",
   "version": "0.2.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-node-app",
     "name": "Node.js App Stack",
     "description": "Generic Node.js application hosting with npm start",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-node-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-node-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { opsDeployer } from "./prompts/deployer.js";
 import { opsCustodian } from "./prompts/custodian.js";
 import { opsSyncer } from "./prompts/syncer.js";

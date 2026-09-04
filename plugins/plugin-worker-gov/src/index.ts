@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { govAuditor } from "./prompts/auditor.js";
 import { govArchivist } from "./prompts/archivist.js";
 

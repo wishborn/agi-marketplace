@@ -1,0 +1,33 @@
+{
+  "name": "@agi/tynn-pm",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "aionima": {
+    "id": "tynn-pm",
+    "name": "Tynn",
+    "description": "Tynn-the-service as a marketplace plugin. Registers a 'tynn' PmProvider (full MCP-backed PM experience replacing tynn-lite for projects that opt in) plus an MCP server template that surfaces in the per-project MCP tab. Future iteration: a Kanban MApp for visual task management. Tynn-lite stays baked-in as the file-based fallback; tynn-plugin is the upgrade path.",
+    "category": "integration",
+    "entry": "./src/index.ts",
+    "permissions": [
+      "network",
+      "config.read"
+    ],
+    "provides": [
+      "ux"
+    ],
+    "adf": [
+      "0UX",
+      "0AGENT"
+    ],
+    "aionimaVersion": ">=0.4.0",
+    "bakedIn": false,
+    "disableable": true
+  },
+  "dependencies": {
+    "@agi/sdk": "workspace:*"
+  }
+}

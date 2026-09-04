@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { testActivate } from "@aionima/sdk/testing";
+import { testActivate } from "@agi/sdk/testing";
 import plugin from "./index.js";
 
 describe("Go App stack plugin", () => {

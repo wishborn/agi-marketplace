@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/channel-telegram",
+  "name": "@agi/channel-telegram",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -24,8 +24,8 @@
     "disableable": true
   },
   "dependencies": {
-    "@aionima/channel-sdk": "workspace:*",
-    "@aionima/plugins": "workspace:*",
+    "@agi/channel-sdk": "workspace:*",
+    "@agi/plugins": "workspace:*",
     "grammy": "^1.35.0"
   }
 }

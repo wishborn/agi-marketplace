@@ -1,0 +1,33 @@
+{
+  "name": "@agi/plaid-api",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "aionima": {
+    "id": "plaid-api",
+    "name": "Plaid",
+    "description": "System-level Plaid integration. Registers 4 agent tools (list-accounts / fetch-transactions / get-balance / identity-verify) globally to Aion's tool palette so Aion can read bank accounts directly; MApps (Accounting / Budget Tracker / Expenses) are secondary consumers via mini-agent auto-discovery. All Plaid API calls route through Hive-ID proxy (DToken auth). agi + Local-ID never hold Plaid credentials.",
+    "category": "integration",
+    "entry": "./src/index.ts",
+    "permissions": [
+      "network",
+      "config.read"
+    ],
+    "provides": [
+      "tools"
+    ],
+    "adf": [
+      "0AGENT",
+      "0FUNC"
+    ],
+    "aionimaVersion": ">=0.4.0",
+    "bakedIn": false,
+    "disableable": true
+  },
+  "dependencies": {
+    "@agi/sdk": "workspace:*"
+  }
+}

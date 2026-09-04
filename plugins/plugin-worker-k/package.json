@@ -1,13 +1,13 @@
 {
-  "name": "@aionima/plugin-worker-k",
-  "version": "0.1.1",
+  "name": "@agi/plugin-worker-k",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "exports": { ".": "./src/index.ts" },
   "aionima": {
     "id": "worker-k",
     "name": "Knowledge Workers",
-    "description": "Knowledge domain workers — analyst, cryptologist, librarian, linguist",
+    "description": "Knowledge domain workers — analyst, cryptologist, librarian, linguist, researcher, scribe",
     "category": "system",
     "provides": ["workers"],
     "permissions": ["filesystem.read"],
@@ -17,6 +17,6 @@
     "disableable": false
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

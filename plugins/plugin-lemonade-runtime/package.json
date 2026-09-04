@@ -1,0 +1,22 @@
+{
+  "name": "@agi/plugin-lemonade-runtime",
+  "version": "0.1.5",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "aionima": {
+    "id": "agi-lemonade-runtime",
+    "name": "Lemonade Runtime",
+    "description": "Local AI server with NPU/GPU/CPU auto-routing. Brings the AMD Ryzen AI NPU online on supported hardware and serves OpenAI/Anthropic/Ollama-compatible APIs for AGI's default local LLM backplane.",
+    "category": "provider",
+    "provides": ["system-services"],
+    "permissions": [],
+    "entry": "./src/index.ts",
+    "aionimaVersion": ">=0.1.0",
+    "bakedIn": false,
+    "disableable": true
+  },
+  "dependencies": {
+    "@agi/sdk": "workspace:*"
+  }
+}

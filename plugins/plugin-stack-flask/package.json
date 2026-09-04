@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-flask",
+  "name": "@agi/plugin-stack-flask",
   "version": "0.1.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-flask",
     "name": "Flask Stack",
-    "description": "Lightweight Python web framework — minimal and extensible",
+    "description": "Lightweight Python web framework \u2014 minimal and extensible",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-python-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-python-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

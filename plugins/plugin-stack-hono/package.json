@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-hono",
+  "name": "@agi/plugin-stack-hono",
   "version": "0.2.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-hono",
     "name": "Hono API Stack",
     "description": "Lightweight Node.js API with Drizzle ORM and Lucia auth",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-node-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-node-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

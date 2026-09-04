@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-project-art",
+  "name": "@agi/plugin-project-art",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -16,6 +16,6 @@
     "bakedIn": false
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@aionima/plugin-worker-code",
-  "version": "0.1.1",
+  "name": "@agi/plugin-worker-code",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "exports": { ".": "./src/index.ts" },
@@ -17,6 +17,6 @@
     "disableable": false
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

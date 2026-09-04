@@ -1,5 +1,6 @@
 {
-  "id": "aionima-php-runtime",
+  "id": "agi-php-runtime",
+  "aliases": ["aionima-php-runtime"],
   "name": "PHP Runtimes",
   "version": "0.1.0",
   "description": "PHP runtime versions for project hosting",

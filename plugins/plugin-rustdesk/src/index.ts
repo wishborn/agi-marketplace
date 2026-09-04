@@ -8,7 +8,7 @@
  * - Knowledge namespace, agent tool, skill, actions
  */
 
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 

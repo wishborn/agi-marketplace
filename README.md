@@ -5,7 +5,7 @@ Official plugin catalog for the [Aionima](https://github.com/Civicognita/agi) au
 ## Structure
 
 ```
-aionima-marketplace/
+agi-marketplace/
 ├── marketplace.json              # Catalog listing all plugins
 ├── plugins/
 │   ├── plugin-node-runtime/      # Node.js runtime versions
@@ -46,7 +46,7 @@ Aionima gateways discover plugins from this repo at boot time. The marketplace d
 ```json
 {
   "marketplace": {
-    "dir": "/opt/aionima-marketplace"
+    "dir": "/opt/agi-marketplace"
   }
 }
 ```
@@ -81,8 +81,8 @@ Each plugin is a directory containing:
 ## Deployment
 
 This repo is pulled alongside AGI, PRIME, and BOTS during deployment:
-- Production: `/opt/aionima-marketplace`
-- Dev mode: `/opt/aionima-marketplace_dev`
+- Production: `/opt/agi-marketplace`
+- Dev mode: `/opt/agi-marketplace_dev`
 
 ## Adding a Plugin
 

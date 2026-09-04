@@ -5,7 +5,7 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { createPlugin, defineSettings, defineSettingsPage } from "@aionima/sdk";
+import { createPlugin, defineSettings, defineSettingsPage } from "@agi/sdk";
 
 const execFileAsync = promisify(execFile);
 
@@ -60,7 +60,7 @@ export default createPlugin({
 
   // Register hosting extension field for PHP version selection
   api.registerHostingExtension({
-    pluginId: "aionima-php-runtime",
+    pluginId: "agi-php-runtime",
     fields: [
       {
         id: "runtimeId",

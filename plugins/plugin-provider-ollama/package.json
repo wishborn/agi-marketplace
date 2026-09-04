@@ -1,6 +1,6 @@
 {
-  "name": "@aionima/provider-ollama",
-  "version": "0.1.1",
+  "name": "@agi/provider-ollama",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "exports": {
@@ -11,13 +11,13 @@
     "name": "Ollama",
     "description": "Local models — connect to Ollama for on-device inference",
     "aionimaVersion": ">=0.1.0",
-    "category": "integration",
+    "category": "provider",
     "provides": ["ux"],
     "entry": "./src/index.ts",
     "bakedIn": true,
     "disableable": true
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

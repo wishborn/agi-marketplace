@@ -1,21 +1,28 @@
 {
-  "name": "@aionima/plugin-php-runtime",
-  "version": "0.2.1",
+  "name": "@agi/plugin-php-runtime",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
-    "id": "aionima-php-runtime",
+    "id": "agi-php-runtime",
     "name": "PHP Runtimes",
     "description": "PHP runtime versions for project hosting",
     "category": "runtime",
-    "provides": ["runtimes"],
+    "provides": [
+      "runtimes"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0",
-    "bakedIn": false
+    "bakedIn": false,
+    "aliases": [
+      "aionima-php-runtime"
+    ]
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

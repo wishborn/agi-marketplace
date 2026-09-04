@@ -7,7 +7,7 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 
 const execFileAsync = promisify(execFile);
 
@@ -104,7 +104,7 @@ export default createPlugin({
 
   // Hosting extension — cache version selector in the Development tab
   api.registerHostingExtension({
-    pluginId: "aionima-redis",
+    pluginId: "agi-redis",
     fields: [
       {
         id: "redisVersion",
@@ -159,7 +159,7 @@ export default createPlugin({
         internalPort: 6379,
         shared: true,
         sharedKey: v.id,
-        volumeMounts: () => [`aionima-${v.id}-data:/data`],
+        volumeMounts: () => [`agi-${v.id}-data:/data`],
         env: () => ({}),
         command: () => ["redis-server", "--appendonly", "yes"],
         healthCheck: "redis-cli ping",

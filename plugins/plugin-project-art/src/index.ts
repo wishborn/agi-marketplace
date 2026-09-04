@@ -1,11 +1,10 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 
 export default createPlugin({
   async activate(api) {
     api.registerProjectType({
       id: "art",
       label: "Art Project",
-      category: "media",
       hostable: true,
       defaultMeta: {
         type: "art",

@@ -1,21 +1,28 @@
 {
-  "name": "@aionima/plugin-python-runtime",
-  "version": "0.1.1",
+  "name": "@agi/plugin-python-runtime",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
-    "id": "aionima-python-runtime",
+    "id": "agi-python-runtime",
     "name": "Python Runtimes",
     "description": "Python runtime versions for project hosting",
     "category": "runtime",
-    "provides": ["runtimes"],
+    "provides": [
+      "runtimes"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0",
-    "bakedIn": true
+    "bakedIn": true,
+    "aliases": [
+      "aionima-python-runtime"
+    ]
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -1,4 +1,4 @@
-import type { WorkerDefinition } from "@aionima/sdk";
+import type { WorkerDefinition } from "@agi/sdk";
 
 export const govAuditor: WorkerDefinition = {
   id: "gov.auditor",
@@ -8,7 +8,6 @@ export const govAuditor: WorkerDefinition = {
   description: "Compliance and verification worker. Audits COA chains, verifies seals, checks policy compliance, and validates governance structures. Entry worker for 'compliance' route. Always followed by gov.archivist in the enforced chain.",
   modelTier: "capable",
   allowedTools: ["Read", "Glob", "Grep"],
-  chainTarget: "gov.archivist",
   keywords: ["audit", "compliance", "COA", "seal", "verify", "governance", "policy check", "accountability"],
   prompt: `---
 name: worker-gov-auditor

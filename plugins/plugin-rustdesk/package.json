@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-rustdesk",
+  "name": "@agi/plugin-rustdesk",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -19,6 +19,6 @@
     "disableable": true
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -5,11 +5,22 @@
   },
   "metadata": {
     "version": "1.0",
-    "description": "Official Aionima plugin marketplace — default plugin catalog for Aionima gateways"
+    "description": "Official Aionima plugin marketplace \u2014 default plugin catalog for Aionima gateways"
   },
   "plugins": [
     {
-      "name": "aionima-mysql",
+      "name": "agi-lemonade-runtime",
+      "source": "./plugins/plugin-lemonade-runtime",
+      "type": "plugin",
+      "category": "runtime",
+      "provides": [
+        "system-services"
+      ],
+      "version": "0.1.3",
+      "description": "Local AI server with NPU/GPU/CPU auto-routing. Installs Lemonade + FastFlowLM, signs the amdxdna DKMS module with a MOK for Secure Boot, adds the amd_iommu=force_isolation kernel flag needed for SVA binding on Strix-class NPUs, and registers Settings + system service + 4 Aion agent tools (lemonade_status/models/pull/load) that proxy through AGI's /api/lemonade/* routes."
+    },
+    {
+      "name": "agi-mysql",
       "source": "./plugins/plugin-mysql",
       "type": "plugin",
       "category": "service",
@@ -18,77 +29,154 @@
         "runtimes",
         "stacks"
       ],
-      "version": "0.2.1",
-      "description": "MariaDB database service for projects"
+      "version": "0.2.2",
+      "description": "MariaDB database service for projects",
+      "aliases": [
+        "aionima-mysql"
+      ]
     },
     {
-      "name": "aionima-node-runtime",
+      "name": "agi-node-runtime",
       "source": "./plugins/plugin-node-runtime",
       "type": "plugin",
       "category": "runtime",
       "provides": [
         "runtimes"
       ],
-      "version": "0.2.1",
-      "description": "Node.js runtime versions for project hosting"
+      "version": "0.2.2",
+      "description": "Node.js runtime versions for project hosting",
+      "aliases": [
+        "aionima-node-runtime"
+      ]
     },
     {
-      "name": "aionima-openclaw",
+      "name": "agi-claw-bridge",
       "source": "./plugins/plugin-openclaw",
       "type": "plugin",
       "category": "integration",
       "provides": [
         "ux"
       ],
-      "version": "0.1.1",
-      "description": "Bridge OpenClaw agents into the AGI dashboard"
+      "version": "0.1.2",
+      "description": "Bridge OpenClaw agents into the AGI dashboard",
+      "aliases": [
+        "aionima-openclaw"
+      ]
     },
     {
-      "name": "aionima-php-runtime",
+      "name": "agi-tynn-pm",
+      "source": "./plugins/plugin-tynn-pm",
+      "type": "plugin",
+      "category": "integration",
+      "provides": [
+        "ux"
+      ],
+      "adf": [
+        "0UX",
+        "0AGENT"
+      ],
+      "version": "0.1.0",
+      "description": "Tynn-the-service as a marketplace plugin — full MCP-backed PM experience plus future Kanban MApp. Tynn-lite stays baked-in as the file-based fallback; tynn-pm is the upgrade path.",
+      "aliases": [
+        "aionima-tynn-pm",
+        "tynn-plugin"
+      ]
+    },
+    {
+      "name": "agi-chrome-devtools-mcp",
+      "source": "./plugins/plugin-chrome-devtools-mcp",
+      "type": "plugin",
+      "category": "integration",
+      "provides": [
+        "ux"
+      ],
+      "adf": [
+        "0AGENT"
+      ],
+      "version": "0.1.0",
+      "description": "Chrome DevTools for Agents (chrome-devtools-mcp) — MCP server template that registers Google's official Chrome DevTools MCP server in the per-project MCP-tab dropdown. Provides agent tools for performance traces, network inspection, screenshots, console messages, and Puppeteer-driven browser automation.",
+      "aliases": [
+        "aionima-chrome-devtools-mcp",
+        "chrome-devtools"
+      ]
+    },
+    {
+      "name": "agi-plaid-api",
+      "source": "./plugins/plugin-plaid-api",
+      "type": "plugin",
+      "category": "integration",
+      "provides": [
+        "tools"
+      ],
+      "adf": [
+        "0AGENT",
+        "0FUNC"
+      ],
+      "version": "0.3.0",
+      "description": "System-level Plaid integration for Aion. Registers 4 agent tools globally (plaid:list-accounts / fetch-transactions / get-balance / identity-verify) so Aion can read bank accounts directly; MApps are secondary consumers via mini-agent auto-discovery. All Plaid traffic routes through Hive-ID's third-party API gateway (s149 unified pattern) — agi → Local-ID proxy → Hive-ID → Plaid. Tokens never leave Hive-ID; agi holds nothing Plaid-specific. Closed end-to-end (s147 + s149 t624/t626/t627).",
+      "aliases": [
+        "aionima-plaid-api",
+        "plaid"
+      ]
+    },
+    {
+      "name": "agi-php-runtime",
       "source": "./plugins/plugin-php-runtime",
       "type": "plugin",
       "category": "runtime",
       "provides": [
         "runtimes"
       ],
-      "version": "0.2.1",
-      "description": "PHP runtime versions for project hosting"
+      "version": "0.2.2",
+      "description": "PHP runtime versions for project hosting",
+      "aliases": [
+        "aionima-php-runtime"
+      ]
     },
     {
-      "name": "aionima-python-runtime",
+      "name": "agi-python-runtime",
       "source": "./plugins/plugin-python-runtime",
       "type": "plugin",
       "category": "runtime",
       "provides": [
         "runtimes"
       ],
-      "version": "0.1.1",
-      "description": "Python runtime versions for project hosting"
+      "version": "0.1.2",
+      "description": "Python runtime versions for project hosting",
+      "aliases": [
+        "aionima-python-runtime"
+      ]
     },
     {
-      "name": "aionima-go-runtime",
+      "name": "agi-go-runtime",
       "source": "./plugins/plugin-go-runtime",
       "type": "plugin",
       "category": "runtime",
       "provides": [
         "runtimes"
       ],
-      "version": "0.1.1",
-      "description": "Go runtime versions for project hosting"
+      "version": "0.1.2",
+      "description": "Go runtime versions for project hosting",
+      "aliases": [
+        "aionima-go-runtime"
+      ]
     },
     {
-      "name": "aionima-rust-runtime",
+      "name": "agi-rust-runtime",
       "source": "./plugins/plugin-rust-runtime",
       "type": "plugin",
       "category": "runtime",
       "provides": [
         "runtimes"
       ],
-      "version": "0.1.1",
-      "description": "Rust runtime versions for project hosting"
+      "version": "0.1.2",
+      "description": "Rust runtime versions for project hosting",
+      "aliases": [
+        "aionima-rust-runtime"
+      ]
     },
     {
-      "name": "aionima-postgres",
+      "name": "agi-postgres",
       "source": "./plugins/plugin-postgres",
       "type": "plugin",
       "category": "service",
@@ -97,8 +185,11 @@
         "runtimes",
         "stacks"
       ],
-      "version": "0.2.1",
-      "description": "PostgreSQL database service — required by the ID service for identity and credential storage"
+      "version": "0.2.2",
+      "description": "PostgreSQL database service \u2014 required by the ID service for identity and credential storage",
+      "aliases": [
+        "aionima-postgres"
+      ]
     },
     {
       "name": "project-api",
@@ -109,7 +200,7 @@
         "project-types"
       ],
       "version": "0.1.1",
-      "description": "API service project type — hostable backend services composed with runtime and framework stacks"
+      "description": "API service project type \u2014 hostable backend services composed with runtime and framework stacks"
     },
     {
       "name": "project-art",
@@ -123,17 +214,6 @@
       "description": "Art/Media project type for creative assets and multimedia content"
     },
     {
-      "name": "project-monorepo",
-      "source": "./plugins/plugin-project-monorepo",
-      "type": "plugin",
-      "category": "project",
-      "provides": [
-        "project-types"
-      ],
-      "version": "0.1.1",
-      "description": "Monorepo project type — multi-package repositories with shared tooling"
-    },
-    {
       "name": "project-ops",
       "source": "./plugins/plugin-project-ops",
       "type": "plugin",
@@ -142,7 +222,7 @@
         "project-types"
       ],
       "version": "0.1.1",
-      "description": "Operations project type — infrastructure, DevOps, and system administration projects"
+      "description": "Operations project type \u2014 infrastructure, DevOps, and system administration projects"
     },
     {
       "name": "project-staticsite",
@@ -153,7 +233,7 @@
         "project-types"
       ],
       "version": "0.1.1",
-      "description": "Static site project type — hostable static websites served via nginx"
+      "description": "Static site project type \u2014 hostable static websites served via nginx"
     },
     {
       "name": "project-webapp",
@@ -164,7 +244,7 @@
         "project-types"
       ],
       "version": "0.1.1",
-      "description": "Web application project type — hostable web projects composed with framework and runtime stacks"
+      "description": "Web application project type \u2014 hostable web projects composed with framework and runtime stacks"
     },
     {
       "name": "project-writing",
@@ -175,10 +255,10 @@
         "project-types"
       ],
       "version": "0.1.1",
-      "description": "Writing/Literature project type — non-hostable projects for manuscripts, articles, and documentation"
+      "description": "Writing/Literature project type \u2014 non-hostable projects for manuscripts, articles, and documentation"
     },
     {
-      "name": "aionima-redis",
+      "name": "agi-redis",
       "source": "./plugins/plugin-redis",
       "type": "plugin",
       "category": "service",
@@ -187,8 +267,11 @@
         "runtimes",
         "stacks"
       ],
-      "version": "0.2.1",
-      "description": "Redis in-memory cache and data store service"
+      "version": "0.2.2",
+      "description": "Redis in-memory cache and data store service",
+      "aliases": [
+        "aionima-redis"
+      ]
     },
     {
       "name": "plugin-rustdesk",
@@ -200,18 +283,21 @@
         "ux"
       ],
       "version": "0.1.0",
-      "description": "RustDesk remote desktop server management — system service, knowledge, and agent tools"
+      "description": "RustDesk remote desktop server management \u2014 system service, knowledge, and agent tools"
     },
     {
-      "name": "aionima-screensaver",
+      "name": "agi-screensaver",
       "source": "./plugins/plugin-screensaver",
       "type": "plugin",
       "category": "system",
       "provides": [
         "ux"
       ],
-      "version": "0.1.1",
-      "description": "Drifting-panel screensaver with system stats, gateway status, and sparkle effects"
+      "version": "0.1.2",
+      "description": "Drifting-panel screensaver with system stats, gateway status, and sparkle effects",
+      "aliases": [
+        "aionima-screensaver"
+      ]
     },
     {
       "name": "stack-hono",
@@ -222,7 +308,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime"
+        "agi-node-runtime"
       ],
       "version": "0.2.1",
       "description": "Lightweight Node.js API with Drizzle ORM and Lucia auth"
@@ -236,7 +322,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-php-runtime"
+        "agi-php-runtime"
       ],
       "version": "0.8.1",
       "description": "Laravel PHP framework stack with Apache container hosting"
@@ -250,7 +336,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime",
+        "agi-node-runtime",
         "stack-react"
       ],
       "version": "0.2.1",
@@ -265,7 +351,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime"
+        "agi-node-runtime"
       ],
       "version": "0.2.1",
       "description": "Generic Node.js application hosting with npm start"
@@ -279,7 +365,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime"
+        "agi-node-runtime"
       ],
       "version": "0.2.1",
       "description": "Vue.js framework with SSR, file-based routing, and auto-imports"
@@ -293,7 +379,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-php-runtime"
+        "agi-php-runtime"
       ],
       "version": "0.3.1",
       "description": "Generic PHP application hosting with Apache"
@@ -307,7 +393,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime"
+        "agi-node-runtime"
       ],
       "version": "0.2.1",
       "description": "React SPA built with Vite, served via nginx in production"
@@ -321,10 +407,10 @@
         "stacks"
       ],
       "depends": [
-        "aionima-node-runtime"
+        "agi-node-runtime"
       ],
       "version": "0.1.1",
-      "description": "React package within a monorepo — component library or standalone app with its own dev server"
+      "description": "React package within a monorepo \u2014 component library or standalone app with its own dev server"
     },
     {
       "name": "stack-static-hosting",
@@ -346,7 +432,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-python-runtime"
+        "agi-python-runtime"
       ],
       "version": "0.1.1",
       "description": "Python web framework with ORM, admin, and template engine"
@@ -360,7 +446,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-python-runtime"
+        "agi-python-runtime"
       ],
       "version": "0.1.1",
       "description": "High-performance Python API with automatic OpenAPI docs"
@@ -374,10 +460,10 @@
         "stacks"
       ],
       "depends": [
-        "aionima-python-runtime"
+        "agi-python-runtime"
       ],
       "version": "0.1.1",
-      "description": "Lightweight Python web framework — minimal and extensible"
+      "description": "Lightweight Python web framework \u2014 minimal and extensible"
     },
     {
       "name": "stack-go-app",
@@ -388,7 +474,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-go-runtime"
+        "agi-go-runtime"
       ],
       "version": "0.1.1",
       "description": "Generic Go application hosting with go run / go build"
@@ -402,7 +488,7 @@
         "stacks"
       ],
       "depends": [
-        "aionima-rust-runtime"
+        "agi-rust-runtime"
       ],
       "version": "0.1.1",
       "description": "Rust application hosting with cargo run / cargo build"
@@ -434,7 +520,7 @@
       "description": "Laravel full-stack with Livewire, Tailwind CSS, and Vite asset bundling"
     },
     {
-      "name": "aionima-xrdp",
+      "name": "agi-xrdp",
       "source": "./plugins/plugin-xrdp",
       "type": "plugin",
       "category": "system",
@@ -442,8 +528,11 @@
         "system-services",
         "ux"
       ],
-      "version": "0.1.0",
-      "description": "xrdp remote desktop server management — isolated RDP sessions with service control, logs, and connection info"
+      "version": "0.1.1",
+      "description": "xrdp remote desktop server management \u2014 isolated RDP sessions with service control, logs, and connection info",
+      "aliases": [
+        "aionima-xrdp"
+      ]
     },
     {
       "name": "channel-telegram",
@@ -509,18 +598,7 @@
         "ux"
       ],
       "version": "0.1.1",
-      "description": "Claude models — connect to Anthropic's API"
-    },
-    {
-      "name": "provider-claude-max",
-      "source": "./plugins/plugin-provider-claude-max",
-      "type": "plugin",
-      "category": "integration",
-      "provides": [
-        "llm-provider"
-      ],
-      "version": "0.1.0",
-      "description": "Use your Claude Max subscription instead of API credits — reads OAuth tokens from Claude Code"
+      "description": "Claude models \u2014 connect to Anthropic's API"
     },
     {
       "name": "provider-openai",
@@ -531,7 +609,7 @@
         "ux"
       ],
       "version": "0.1.1",
-      "description": "GPT models — connect to OpenAI's API"
+      "description": "GPT models \u2014 connect to OpenAI's API"
     },
     {
       "name": "provider-ollama",
@@ -542,13 +620,13 @@
         "ux"
       ],
       "version": "0.1.1",
-      "description": "Local models — connect to Ollama for on-device inference"
+      "description": "Local models \u2014 connect to Ollama for on-device inference"
     },
     {
       "name": "worker-code",
       "source": "plugins/plugin-worker-code",
       "type": "plugin",
-      "description": "Code domain workers — engineer, hacker, reviewer, tester",
+      "description": "Code domain workers \u2014 engineer, hacker, reviewer, tester",
       "provides": [
         "workers"
       ],
@@ -559,7 +637,7 @@
       "name": "worker-k",
       "source": "plugins/plugin-worker-k",
       "type": "plugin",
-      "description": "Knowledge domain workers — analyst, cryptologist, librarian, linguist",
+      "description": "Knowledge domain workers \u2014 analyst, cryptologist, librarian, linguist",
       "provides": [
         "workers"
       ],
@@ -570,7 +648,7 @@
       "name": "worker-ux",
       "source": "plugins/plugin-worker-ux",
       "type": "plugin",
-      "description": "UX domain workers — designer.web, designer.cli",
+      "description": "UX domain workers \u2014 designer.web, designer.cli",
       "provides": [
         "workers"
       ],
@@ -581,7 +659,7 @@
       "name": "worker-strat",
       "source": "plugins/plugin-worker-strat",
       "type": "plugin",
-      "description": "Strategy domain workers — planner, prioritizer",
+      "description": "Strategy domain workers \u2014 planner, prioritizer",
       "provides": [
         "workers"
       ],
@@ -592,7 +670,7 @@
       "name": "worker-comm",
       "source": "plugins/plugin-worker-comm",
       "type": "plugin",
-      "description": "Communication domain workers — writer.tech, writer.policy, editor",
+      "description": "Communication domain workers \u2014 writer.tech, writer.policy, editor",
       "provides": [
         "workers"
       ],
@@ -603,7 +681,7 @@
       "name": "worker-ops",
       "source": "plugins/plugin-worker-ops",
       "type": "plugin",
-      "description": "Operations domain workers — deployer, custodian, syncer",
+      "description": "Operations domain workers \u2014 deployer, custodian, syncer",
       "provides": [
         "workers"
       ],
@@ -614,7 +692,7 @@
       "name": "worker-gov",
       "source": "plugins/plugin-worker-gov",
       "type": "plugin",
-      "description": "Governance domain workers — auditor, archivist",
+      "description": "Governance domain workers \u2014 auditor, archivist",
       "provides": [
         "workers"
       ],
@@ -625,7 +703,7 @@
       "name": "worker-data",
       "source": "plugins/plugin-worker-data",
       "type": "plugin",
-      "description": "Data domain workers — modeler, migrator",
+      "description": "Data domain workers \u2014 modeler, migrator",
       "provides": [
         "workers"
       ],
@@ -658,7 +736,7 @@
       "name": "stack-writing-novel",
       "source": "plugins/plugin-stack-writing-novel",
       "type": "plugin",
-      "description": "Novel writing stack — chapters, character profiles, worldbuilding",
+      "description": "Novel writing stack \u2014 chapters, character profiles, worldbuilding",
       "provides": [
         "stacks"
       ],
@@ -669,7 +747,7 @@
       "name": "stack-writing-screenplay",
       "source": "plugins/plugin-stack-writing-screenplay",
       "type": "plugin",
-      "description": "Screenplay writing stack — scenes, act structure",
+      "description": "Screenplay writing stack \u2014 scenes, act structure",
       "provides": [
         "stacks"
       ],
@@ -680,7 +758,7 @@
       "name": "stack-writing-research",
       "source": "plugins/plugin-stack-writing-research",
       "type": "plugin",
-      "description": "Research paper stack — academic sections, citations",
+      "description": "Research paper stack \u2014 academic sections, citations",
       "provides": [
         "stacks"
       ],

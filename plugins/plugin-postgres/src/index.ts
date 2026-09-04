@@ -7,7 +7,7 @@
 
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { createPlugin, defineSettingsPage } from "@aionima/sdk";
+import { createPlugin, defineSettingsPage } from "@agi/sdk";
 
 const execFileAsync = promisify(execFile);
 
@@ -107,7 +107,7 @@ export default createPlugin({
 
   // Hosting extension — database version selector in the Development tab
   api.registerHostingExtension({
-    pluginId: "aionima-postgres",
+    pluginId: "agi-postgres",
     fields: [
       {
         id: "postgresVersion",
@@ -189,7 +189,7 @@ export default createPlugin({
         internalPort: 5432,
         shared: true,
         sharedKey: v.id,
-        volumeMounts: () => [`aionima-${v.id}-data:/var/lib/postgresql/data`],
+        volumeMounts: () => [`agi-${v.id}-data:/var/lib/postgresql/data`],
         env: () => ({ POSTGRES_PASSWORD: "aionima-root" }),
         healthCheck: "pg_isready -U postgres",
       },

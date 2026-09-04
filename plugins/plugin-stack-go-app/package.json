@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-go-app",
+  "name": "@agi/plugin-stack-go-app",
   "version": "0.1.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-go-app",
     "name": "Go App Stack",
     "description": "Generic Go application hosting with go run / go build",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-go-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-go-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-tall",
+  "name": "@agi/plugin-stack-tall",
   "version": "0.3.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-tall",
     "name": "TALL Stack",
     "description": "Laravel full-stack with Livewire, Tailwind CSS, and Vite asset bundling",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-php-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-php-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

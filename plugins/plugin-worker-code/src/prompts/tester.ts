@@ -1,4 +1,4 @@
-import type { WorkerDefinition } from "@aionima/sdk";
+import type { WorkerDefinition } from "@agi/sdk";
 
 export const codeTester: WorkerDefinition = {
   id: "code.tester",

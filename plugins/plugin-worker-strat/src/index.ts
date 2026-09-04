@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { stratPlanner } from "./prompts/planner.js";
 import { stratPrioritizer } from "./prompts/prioritizer.js";
 import { strategist } from "./prompts/strategist.js";

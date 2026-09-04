@@ -1,21 +1,28 @@
 {
-  "name": "@aionima/plugin-node-runtime",
-  "version": "0.2.1",
+  "name": "@agi/plugin-node-runtime",
+  "version": "0.2.2",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
-    "id": "aionima-node-runtime",
+    "id": "agi-node-runtime",
     "name": "Node.js Runtimes",
     "description": "Node.js runtime versions for project hosting",
     "category": "runtime",
-    "provides": ["runtimes"],
+    "provides": [
+      "runtimes"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0",
-    "bakedIn": true
+    "bakedIn": true,
+    "aliases": [
+      "aionima-node-runtime"
+    ]
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/channel-signal",
+  "name": "@agi/channel-signal",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -24,7 +24,7 @@
     "disableable": true
   },
   "dependencies": {
-    "@aionima/channel-sdk": "workspace:*",
-    "@aionima/plugins": "workspace:*"
+    "@agi/channel-sdk": "workspace:*",
+    "@agi/plugins": "workspace:*"
   }
 }

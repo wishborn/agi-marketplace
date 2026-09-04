@@ -2,7 +2,7 @@
 
 ## Overview
 
-Knowledge domain workers for research, analysis, and information management. Provides seven workers covering data analysis, cryptographic operations, library management, linguistic work, research, and transcription. This plugin is baked in and cannot be disabled.
+Knowledge domain workers for research, analysis, and information management. Provides six workers covering data analysis, cryptographic operations, library management, linguistic work, research, and transcription. This plugin is baked in and cannot be disabled.
 
 ## Workers
 
@@ -12,7 +12,6 @@ Knowledge domain workers for research, analysis, and information management. Pro
 | `k.cryptologist` | Cryptologist | Cryptographic analysis and implementation review — keys, ciphers, protocols |
 | `k.librarian` | Librarian | Organizes, indexes, and retrieves information — manages knowledge bases and file collections |
 | `k.linguist` | Linguist | Terminology management — maintains glossaries, ensures naming consistency across the codebase |
-| `k.analyst` (standalone) | Analyst | Standalone analysis without a chain target |
 | `k.researcher` | Researcher | Deep research and literature review — synthesizes information from multiple sources |
 | `k.scribe` | Scribe | Transcription and formatting — converts raw content into structured documents |
 

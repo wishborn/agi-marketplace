@@ -4,7 +4,7 @@
  * Registers the Next.js framework stack definition with container hosting support.
  */
 
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 
 /**
  * Shell command that patches next.config to read ALLOWED_DEV_ORIGINS from env.

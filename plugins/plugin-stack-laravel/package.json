@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-laravel",
+  "name": "@agi/plugin-stack-laravel",
   "version": "0.8.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-laravel",
     "name": "Laravel Stack",
     "description": "Laravel PHP framework stack with Apache container hosting",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-php-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-php-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

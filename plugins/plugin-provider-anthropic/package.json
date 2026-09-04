@@ -1,6 +1,6 @@
 {
-  "name": "@aionima/provider-anthropic",
-  "version": "0.1.1",
+  "name": "@agi/provider-anthropic",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "exports": {
@@ -11,13 +11,13 @@
     "name": "Anthropic",
     "description": "Claude models — connect to Anthropic's API",
     "aionimaVersion": ">=0.1.0",
-    "category": "integration",
+    "category": "provider",
     "provides": ["ux"],
     "entry": "./src/index.ts",
     "bakedIn": true,
     "disableable": true
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

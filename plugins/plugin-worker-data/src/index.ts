@@ -1,4 +1,4 @@
-import { createPlugin } from "@aionima/sdk";
+import { createPlugin } from "@agi/sdk";
 import { dataModeler } from "./prompts/modeler.js";
 import { dataMigrator } from "./prompts/migrator.js";
 

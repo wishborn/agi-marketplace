@@ -1,5 +1,5 @@
 {
-  "name": "@aionima/plugin-worker-strat",
+  "name": "@agi/plugin-worker-strat",
   "version": "0.1.1",
   "private": true,
   "type": "module",
@@ -17,6 +17,6 @@
     "disableable": false
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

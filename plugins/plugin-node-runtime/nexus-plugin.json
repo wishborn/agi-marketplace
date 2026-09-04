@@ -1,5 +1,6 @@
 {
-  "id": "aionima-node-runtime",
+  "id": "agi-node-runtime",
+  "aliases": ["aionima-node-runtime"],
   "name": "Node.js Runtimes",
   "version": "0.1.0",
   "description": "Node.js runtime versions for project hosting",

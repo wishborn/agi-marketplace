@@ -1,21 +1,27 @@
 {
-  "name": "@aionima/plugin-stack-php-app",
+  "name": "@agi/plugin-stack-php-app",
   "version": "0.3.1",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "aionima": {
     "id": "stack-php-app",
     "name": "PHP App Stack",
     "description": "Generic PHP application hosting with Apache",
     "category": "stack",
-    "provides": ["stacks"],
-    "depends": ["aionima-php-runtime"],
+    "provides": [
+      "stacks"
+    ],
+    "depends": [
+      "agi-php-runtime"
+    ],
     "permissions": [],
     "entry": "./src/index.ts",
     "aionimaVersion": ">=0.1.0"
   },
   "dependencies": {
-    "@aionima/sdk": "workspace:*"
+    "@agi/sdk": "workspace:*"
   }
 }

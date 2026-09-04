@@ -1,4 +1,4 @@
-import type { WorkerDefinition } from "@aionima/sdk";
+import type { WorkerDefinition } from "@agi/sdk";
 
 export const dataModeler: WorkerDefinition = {
   id: "data.modeler",
@@ -8,7 +8,6 @@ export const dataModeler: WorkerDefinition = {
   description: "Schema design and entity relationship worker. Creates data models, defines schemas, and maps entity relationships. Always followed by k.linguist in the enforced chain.",
   modelTier: "capable",
   allowedTools: ["Read", "Write", "Edit", "Glob", "Grep"],
-  chainTarget: "k.linguist",
   keywords: ["schema", "data model", "entity", "relationship", "ERD", "database design", "migration", "JSON schema", "SQL", "data structure"],
   prompt: `---
 name: worker-data-modeler

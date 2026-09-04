@@ -1,0 +1,32 @@
+{
+  "name": "@agi/chrome-devtools-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "aionima": {
+    "id": "chrome-devtools-mcp",
+    "name": "Chrome DevTools",
+    "description": "Chrome DevTools for Agents (chrome-devtools-mcp from ChromeDevTools/chrome-devtools-mcp). Provides agent tools for recording performance traces, inspecting network requests, taking screenshots, reading console messages with source-mapped stack traces, and automating Chrome via Puppeteer. Surfaces in the per-project MCP-tab dropdown via the s127 t489 template registry.",
+    "category": "integration",
+    "entry": "./src/index.ts",
+    "permissions": [
+      "network",
+      "config.read"
+    ],
+    "provides": [
+      "ux"
+    ],
+    "adf": [
+      "0AGENT"
+    ],
+    "aionimaVersion": ">=0.4.307",
+    "bakedIn": false,
+    "disableable": true
+  },
+  "dependencies": {
+    "@agi/sdk": "workspace:*"
+  }
+}
